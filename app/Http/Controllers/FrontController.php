@@ -17,9 +17,10 @@ class FrontController extends Controller
                 ->where('city', $request->get('City'))
                 ->where('street', $request->get('Street'))
                 ->where('number', $request->get('Nr'))
-                ->get()->toArray();
+                ->get();
 
-        dd($services[0]['service']);
+        return $services;
+//        dd($services[0]['service']);
 
 //        $response = [];
 //        foreach ($services->service as $key => $service){
